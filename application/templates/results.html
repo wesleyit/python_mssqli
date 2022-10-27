@@ -1,0 +1,49 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block content %}
+
+<div class="jumbotron jumbotron-fluid">
+    <a href="/">
+        <div class="container">
+            <h1>Latest Articles</h1>
+            <p>Using this site you can search for informative articles.</p>
+        </div>
+    </a>
+</div>
+
+<div class="container">
+    {% for i in items %}
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">{{ i[0] }}</h4>
+            <p class="card-text">{{ i[1] }}</p>
+            <a href="#" class="card-link">click here to learn more</a>
+        </div>
+    </div>
+    <br>
+    {% endfor %}
+    <br>
+</div>
+
+<hr>
+
+<div class="container">
+    <br>
+    <h2>Perform a new search...</h2>
+    <br>
+    <br>
+    <form action="/" method="post">
+        <div class="form-group">
+            <label for="searchtext">Text to search in article descriptions:</label>
+            <input type="text" class="form-control" placeholder="articles" id="searchtext" name="searchtext">
+        </div>
+        <div class="form-group form-check">
+            <label class="form-check-label">
+                <input class="form-check-input" type="checkbox"> Ignore case
+            </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+</div>
+
+{% endblock %}

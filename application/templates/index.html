@@ -1,0 +1,29 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block content %}
+
+<div class="jumbotron jumbotron-fluid">
+    <a href="/">
+        <div class="container">
+            <h1>Latest Articles</h1>
+            <p>Using this site you can search for informative articles.</p>
+        </div>
+    </a>
+</div>
+
+<div class="container">
+    <form action="/" method="post">
+        <div class="form-group">
+            <label for="searchtext">Text to search in article descriptions:</label>
+            <input type="text" class="form-control" placeholder="articles" id="searchtext" name="searchtext">
+        </div>
+        <div class="form-group form-check">
+            <label class="form-check-label">
+                <input class="form-check-input" type="checkbox"> Ignore case
+            </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+</div>
+
+{% endblock %}

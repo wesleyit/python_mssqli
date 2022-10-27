@@ -1,0 +1,13 @@
+# Production
+pyodbc
+flask
+flask_bootstrap4
+
+# Development
+pip
+flake8
+isort
+pylama
+pylint
+ipython
+autopep8
